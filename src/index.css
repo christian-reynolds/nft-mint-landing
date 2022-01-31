@@ -20,6 +20,10 @@ code {
     monospace;
 }
 
+.gradient {
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
 @font-face {
   font-family: 'Source Sans Pro';
   src: local('Source Sans Pro'), url(./fonts/SourceSansPro-Regular.ttf);
