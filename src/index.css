@@ -7,7 +7,7 @@ body {
   font-family: 'aktiv-grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, #414141 0%, #2D3436 100%);
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   line-height: 1.5;
   letter-spacing: 0em;
   color: rgb(255 255 255);
@@ -19,7 +19,7 @@ code {
 }
 
 .gradient {
-  background: linear-gradient(90deg, #414141 0%, #2D3436 100%);
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
 }
 
 @font-face {

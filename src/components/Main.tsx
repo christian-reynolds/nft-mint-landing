@@ -6,19 +6,25 @@ function Main() {
                     {/* Left Col */}
                     <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
                         {/* <p className="uppercase tracking-loose w-full">"Wen Moon?" you ask?</p> */}
-                        <h1 className="my-4 text-5xl font-bold leading-tight">
-                            "Wen Moon?" you ask?
-                        </h1>
-                        <p className="leading-normal text-2xl mb-8">
-                        The quick brown fox jumps over the lazy dog
+                        {/* <h1 className="my-4 text-5xl font-bold leading-tight text-center">
+                            
+                        </h1> */}
+                        <p className="leading-normal text-2xl mb-8 text-center">
+                            <span className="text-yellow-300">"Wen Moon?"</span> you ask?<br />
+                            You have landed at the right place fren!<br />
+                            Welcome to the <span className="text-yellow-300">LFG Galactic Travel Agency</span><br />
+                            We're here to help you travel to the edge of your imagination...<br />
+                            Before departing, make sure your passport is valid, then LFG!!!!<br />
+                            We only have room for 2300 travelers this season.<br />
+                            <a href="https://opensea.io/collection/lfggta" target="_blank">https://opensea.io/collection/lfggta</a>
                         </p>
                         {/* <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
                             Subscribe
                         </button> */}
                     </div>
                     {/* Right Col */}
-                    <div className="w-full md:w-3/5 py-6 text-center">
-                        <img className="w-full md:w-4/5 z-50" src="/img/logo.jpg" />
+                    <div className="w-full md:w-3/5 py-6 justify-center flex">
+                        <img className="w-full md:w-4/5" src="/img/circle.png" />
                     </div>
                 </div>
             </div>
