@@ -4,12 +4,10 @@
 
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'aktiv-grotesk', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: linear-gradient(90deg, #414141 0%, #2D3436 100%);
   line-height: 1.5;
   letter-spacing: 0em;
   color: rgb(255 255 255);
@@ -21,10 +19,10 @@ code {
 }
 
 .gradient {
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: linear-gradient(90deg, #414141 0%, #2D3436 100%);
 }
 
 @font-face {
-  font-family: 'Source Sans Pro';
-  src: local('Source Sans Pro'), url(./fonts/SourceSansPro-Regular.ttf);
+  font-family: 'aktiv-grotesk';
+  src: local('aktiv-grotesk'), url(./fonts/AktivGroteskCorp-Regular.ttf);
 }
