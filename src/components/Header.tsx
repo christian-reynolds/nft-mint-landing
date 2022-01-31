@@ -2,6 +2,11 @@ import { useEffect, useState } from "react";
 
 function Header() {
     const [isTop, setIsTop] = useState<boolean>(true);
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
 
     useEffect(() => {
         const onScroll: EventListener = (event: Event) => {
@@ -29,16 +34,19 @@ function Header() {
                 </a>
                 </div>
                 <div className="block lg:hidden pr-4">
-                <button id="nav-toggle" className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    <svg className="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
-                </button>
+                    <button
+                        id="nav-toggle"
+                        className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+                        onClick={toggleMenu}>
+                        <svg className="fill-current h-6 w-6" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <title>Menu</title>
+                            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                        </svg>
+                    </button>
                 </div>
                 <div 
                     id="nav-content" 
-                    className={`w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 ${isTop ? " bg-gray-100" : " bg-white"}`}>
+                    className={`w-full flex-grow lg:flex lg:items-center lg:w-auto mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 ${isTop ? " bg-gray-100" : " bg-white"} ${isOpen ? " " : " hidden"}`}>
                     <ul className="list-reset lg:flex justify-end flex-1 items-center">
                         {/* <li className="mr-3">
                         <a className="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
