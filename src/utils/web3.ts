@@ -17,3 +17,8 @@ export const displayAddress = async (address?: string | null, provider?: provide
   const ensName = provider && await lookupEnsName(address, provider);
   return ensName ?? shortenAddress(address);
 };
+
+export const getChainId = async (provider?: providers.Web3Provider) => {
+  const network = await provider?.getNetwork();
+  return network?.chainId;
+};

@@ -1,4 +1,19 @@
+import { useAsync } from 'react-async-hook';
+import { useWeb3React } from "@web3-react/core";
+import { providers } from "ethers";
+import { useEffect, useState } from "react";
+import Modal from "./common/Modal";
+import { getChainId } from '../utils/web3';
+
 function Main() {
+    const { account, library } = useWeb3React<providers.Web3Provider>();
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+
+    useAsync(async () => {
+        const chainId = await getChainId(library);
+        (chainId === 4 ? setIsOpen(false) : setIsOpen(true));
+    }, [library]);
+
     return (
         <>
             <div className="pt-24">
@@ -104,6 +119,12 @@ function Main() {
                     </div>
                 </div>
             </section>
+
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+                <p className="text-lg text-black">
+                    Please connect your wallet!
+                </p>
+            </Modal>
         </>
     );
 }
