@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Button from "./common/Button";
+import Wallet from "./Wallet";
 
 function Header() {
     const [isTop, setIsTop] = useState<boolean>(true);
@@ -59,9 +59,8 @@ function Header() {
                         <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#">link</a>
                         </li> */}
                     </ul>
-                    <Button
-                        label="Connect Wallet"
-                        className={`mx-auto lg:mx-0 hover:underline font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ${isTop ? " bg-white text-gray-800" : " gradient text-white"}`}
+                    <Wallet
+                        className={`mx-auto lg:mx-0 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out ${isTop ? " bg-white text-gray-800" : " gradient text-white"}`}
                     />
                 </div>
             </div>
