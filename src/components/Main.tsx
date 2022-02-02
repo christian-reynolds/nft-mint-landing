@@ -10,8 +10,9 @@ function Main() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
     useAsync(async () => {
+        // TODO: Modify this for mainnet
         const chainId = await getChainId(library);
-        (chainId === 4 ? setIsOpen(false) : setIsOpen(true));
+        chainId === 4 ? setIsOpen(false) : setIsOpen(true);
     }, [library]);
 
     return (
@@ -121,8 +122,8 @@ function Main() {
             </section>
 
             <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
-                <p className="text-lg text-black">
-                    Please connect your wallet!
+                <p className="text-gray-800 text-2xl uppercase">
+                    Please connect your wallet to mint!
                 </p>
             </Modal>
         </>
